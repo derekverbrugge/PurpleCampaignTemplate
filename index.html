@@ -12,39 +12,11 @@
   >
 
   <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
 </head>
 
 <body>
-  <header class="site-header">
-    <div class="container nav-container">
-      <a class="brand" href="#top" aria-label="John Smith home">
-        <span class="brand-mark">JS</span>
-        <span class="brand-text">
-          <strong>John Smith</strong>
-          <small>For State Representative</small>
-        </span>
-      </a>
-
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-expanded="false"
-        aria-controls="site-navigation"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-        <span class="sr-only">Toggle navigation</span>
-      </button>
-
-      <nav id="site-navigation" class="site-navigation" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#priorities">Priorities</a>
-        <a href="#involved">Get Involved</a>
-        <a class="nav-button" href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <div id="site-header"></div>
 
   <main id="top">
     <section class="hero">
@@ -79,10 +51,12 @@
 
         <div class="hero-art" aria-label="Decorative campaign graphic">
           <div class="sunburst"></div>
+
           <div class="hero-card">
             <span class="hero-card-label">Community</span>
             <strong>Listen.<br>Lead.<br>Serve.</strong>
           </div>
+
           <div class="hero-shape hero-shape-one"></div>
           <div class="hero-shape hero-shape-two"></div>
         </div>
@@ -144,32 +118,35 @@
 
         <div class="priority-grid">
           <article class="priority-card">
-            <div class="priority-number">01</div>
             <h3>Affordable Communities</h3>
+
             <p>
               Support communities where families, workers, and older residents
               can find stable and attainable housing.
             </p>
+
             <a href="#contact" class="card-link">Learn more →</a>
           </article>
 
           <article class="priority-card">
-            <div class="priority-number">02</div>
             <h3>Strong Schools</h3>
+
             <p>
               Encourage educational opportunity, responsible investment, and
               support for students, families, and educators.
             </p>
+
             <a href="#contact" class="card-link">Learn more →</a>
           </article>
 
           <article class="priority-card">
-            <div class="priority-number">03</div>
             <h3>Responsible Government</h3>
+
             <p>
               Promote transparency, careful budgeting, accessible services, and
               clear communication with residents.
             </p>
+
             <a href="#contact" class="card-link">Learn more →</a>
           </article>
         </div>
@@ -184,9 +161,7 @@
           Public service begins with listening.
         </blockquote>
 
-        <p>
-          — John Smith
-        </p>
+        <p>— John Smith</p>
       </div>
     </section>
 
@@ -195,6 +170,7 @@
         <div>
           <p class="eyebrow">Get involved</p>
           <h2>There is a place for you here.</h2>
+
           <p class="section-copy">
             Whether you want to volunteer, share an idea, attend an event, or
             simply learn more, the campaign welcomes your participation.
@@ -218,6 +194,7 @@
         <div>
           <p class="eyebrow">Stay connected</p>
           <h2>Have a question?</h2>
+
           <p>
             Use the contact details below or replace this section with a
             campaign form, event calendar, newsletter signup, or donation link.
@@ -233,42 +210,6 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <strong>John Smith</strong>
-        <p>For State Representative</p>
-      </div>
-
-      <div class="footer-links">
-        <a href="#about">About</a>
-        <a href="#priorities">Priorities</a>
-        <a href="#contact">Contact</a>
-      </div>
-
-      <p class="disclaimer">
-        Paid for by John Smith for State Representative.
-      </p>
-    </div>
-  </footer>
-
-  <script>
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navigation = document.querySelector("#site-navigation");
-
-    menuToggle.addEventListener("click", () => {
-      const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
-
-      menuToggle.setAttribute("aria-expanded", String(!isOpen));
-      navigation.classList.toggle("is-open", !isOpen);
-    });
-
-    navigation.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        menuToggle.setAttribute("aria-expanded", "false");
-        navigation.classList.remove("is-open");
-      });
-    });
-  </script>
+  <div id="site-footer"></div>
 </body>
 </html>
