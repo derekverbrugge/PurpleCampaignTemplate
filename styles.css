@@ -714,7 +714,6 @@ blockquote {
   color: var(--yellow);
 }
 
-.disclaimer,
 .copyright {
   grid-column: 1 / -1;
   padding-top: 1.2rem;
