@@ -1,0 +1,5 @@
+# PurpleCampaignTemplate
+
+- [John Smith | For State Representative](https://derekverbrugge.github.io/PurpleCampaignTemplate/)
+
+[Full text](https://derekverbrugge.github.io/PurpleCampaignTemplate/llms-full.txt)
